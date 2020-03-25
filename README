@@ -1,0 +1,9 @@
+- npm install 'x' -D faz com que a dependência seja instalada como 
+uma dependência de desenvolvimento e não aplicação
+
+- nodemon: dependência que permite a alteração e reinicialização do 
+servidor toda vez que houver alteração do código. Colocar ele nos 
+scripts para funcionar
+
+- knex: uma biblioteca para Query Builder (abordagem para usar, no 
+caso, JS no lugar de queries, tornando o códiog mais abrangente)
