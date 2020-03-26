@@ -25,7 +25,7 @@ routes.get('/', (request, response) => {
 
 });
 
-routes.post('/users', (request, response) => {
+routes.post('/ongs', (request, response) => {
 
     const body = request.body;
 
