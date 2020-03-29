@@ -1,10 +1,11 @@
 const express = require('express'); //importa um módulo para uma variável, em node
+const cors = require('cors');
 const routes = require('./routes'); //importa as rotas do módulo routes
 
 const app = express(); //variável que armazena toda a aplicação
 
+app.use(cors());
 app.use(express.json()); //indicando que as requisições usam formato JSON 
-
 app.use(routes);
 
 

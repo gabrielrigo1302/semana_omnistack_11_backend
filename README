@@ -1,3 +1,17 @@
+- Query Params: 
+    Parâmetros nomeados enviados na rota após "?" (Filtros, paginação)
+    const params = request.query;
+
+- Route Params: 
+    Parâmetros utilizados para identificar recursos, "/:id"
+    const params = request.params
+
+- Request Body: 
+    Corpo da requisição, utilizado para criação ou alteração de recursos "{ "id": 1 }"
+    const body = request.body
+  
+
+  
 - npm install 'x' -D faz com que a dependência seja instalada como 
 uma dependência de desenvolvimento e não aplicação
 
@@ -6,4 +20,7 @@ servidor toda vez que houver alteração do código. Colocar ele nos
 scripts para funcionar
 
 - knex: uma biblioteca para Query Builder (abordagem para usar, no 
-caso, JS no lugar de queries, tornando o códiog mais abrangente)
+caso, JS no lugar de queries, tornando o códiog mais abrangente)     
+
+- cors
+ 

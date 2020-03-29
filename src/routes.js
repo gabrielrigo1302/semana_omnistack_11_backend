@@ -1,43 +1,19 @@
 const express = require('express');
-
 const routes = express.Router(); // desacoplando o módulo de rotas do express em uma variável
+const OngController = require('./controller/OngController');
+const IncidentController = require('./controller/IncidentController');
+const ProfileController = require('./controller/ProfileController');
+const SessionController = require('./controller/SessionController');
 
-/**
- * Query Params: 
- *      Parâmetros nomeados enviados na rota após "?" (Filtros, paginação)
- *      const params = request.query;
- * 
- * Route Params: 
- *      Parâmetros utilizados para identificar recursos, "/:id"
- *      const params = request.params
- * 
- * Request Body: 
- *      Corpo da requisição, utilizado para criação ou alteração de recursos "{ "id": 1 }"
- *      const body = request.body
- *      
- */
+routes.post('/sessions', SessionController.create);
 
-routes.get('/', (request, response) => {
-    
-    response.json({
-        mensagem: "Hello world"
-    });
+routes.get('/ongs', OngController.index);
+routes.post('/ongs', OngController.create);
 
-});
+routes.get('/incidents', IncidentController.index);
+routes.post('/incidents', IncidentController.create);
+routes.delete('/incidents/:id', IncidentController.delete);
 
-routes.post('/ongs', (request, response) => {
-
-    const body = request.body;
-
-    console.log("Body: ", body);
-
-    return response.json({
-        evento: 'Home Office',
-        empregado: 'Gabriel de Oliveira Rigo'
-    });
-
-
-});
-
+routes.get('/profile', ProfileController.index);
 
 module.exports = routes; 
